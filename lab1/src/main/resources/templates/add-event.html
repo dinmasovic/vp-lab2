@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Add Event / Edit Event</h1>
+
+<form method="POST" action="">
+Change name <input type="text" name="editName" th:value="${name}"></br>
+Change description <input type="text" name="editDes" th:value="${des}"></br>
+Change rating <input type="number" name="editRate" th:value="${rate}"></br>
+Change location <select style="margin-top: 20px" name="editLocation">
+    <option value="" selected disabled>Select an Event</option>
+    <option th:each="location : ${locations}" th:value="|${location.id}|" th:text="${location.id}" ></option>
+</select>
+    <input type="submit" value="Submit Changes">
+</form>
+<p th:text="${a}"></p>
+<p th:text="${b}"></p>
+<p th:text="${c}"></p>
+<p th:text="${d}"></p>
+</body>
+</html>
